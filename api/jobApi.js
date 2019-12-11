@@ -114,7 +114,7 @@ router.put("/user/:idUser", function(req, res, next) {
 router.delete("/user/:idUser", function(req, res, next) {
   Offre.destroy({ where: { id: req.body.id, UserId: req.params.idUser } })
     .then(() => {
-      res.send("offre deleted successfuly");
+      res.send("offre deleted successfully");
     })
     .catch(err => {
       res.send(err);
